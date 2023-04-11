@@ -12,23 +12,23 @@ createApp({
   },
 
   mounted(){
-    axios
-    .get(this.url)
-    .then(response => {
-        
-
     for (let i = 0; i < 10; i++) {
-        this.myData = response.data
-        let element = response.data.response
-        console.log(element)
+        axios
+        .get(this.url)
+        .then(response => {
+            this.myData = response.data
+            this.email.push(this.myData)
+
+        })
+
+       
+        
     }
 
-  /*       for (let i = 0; i < 10; i++) {
-            this.myData += response.data.response
-            console.log(response.data.response)
-            
-        } */
-    })
+    console.log(this.email)
+
+
+
 
   }
 }).mount('#app')
