@@ -11,9 +11,9 @@
 <body>
     
     <div id="app">
-        <ul>
-            <li v-if="email.length === 10" v-for="(response, index) in email">
-                {{response.response}}
+        <ul >
+            <li v-for="(response, index) in email">
+                <span v-if="email.length === 10">{{response.response}}</span>
             </li>
         </ul>
 
