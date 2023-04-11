@@ -18,8 +18,8 @@
 
         
             <div class="card w-50 d-flex justify-content-center align-self-center">
-                <ul>
-                    <li v-for="(response, index) in email" class="m-2" v-if="email.length === 10">
+                <ul v-for="(response, index) in email" >
+                    <li class="m-2" v-if="email.length === 10">
                         <span>{{response.response}}</span>
                     </li>
                 </ul>
